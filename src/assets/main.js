@@ -4,7 +4,7 @@ let attempt = document.getElementById('attempt');
 function guess() {
     let input = document.getElementById('user-guess');
     if (answer.value == '' || attempt.value == '') {
-        setHiddensFields();
+        setHiddenFields();
     }
     if (!validateInput(input.value)) {
         return false;
@@ -25,7 +25,7 @@ function guess() {
     }
 }
 
-function setHiddensFields() {
+function setHiddenFields() {
     answer.value = Math.floor(Math.random() * 9999).toString();
     while (answer.value.length < 4) {
         answer.value = '0' + answer.value;
